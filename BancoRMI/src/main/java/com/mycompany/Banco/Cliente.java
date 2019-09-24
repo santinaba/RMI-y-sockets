@@ -9,9 +9,6 @@ public class Cliente{
 	InterfazBanco CotizarDolar;
         Scanner sc =new Scanner(System.in);
         String cadena="";
-        String Finicio="";
-        String FFin="";
-        String Cotizacion="";
 	try {
 	    CotizarDolar=(InterfazBanco)Naming.lookup("rmi://localhost/CotizarDolar");
             System.out.println("Introduce una fecha Ej. 27-09-19");
@@ -27,8 +24,11 @@ public class Cliente{
 	    e.printStackTrace();
 	}
         InterfazBancoCliente Cotizar;
-        Scanner s =new Scanner(System.in);
-        cadena="";
+        sc =new Scanner(System.in);
+        String caden="";
+	String Finicio="";
+	String FFin="";
+	String Cotizacion="";
         try{
             Cotizar=(InterfazBancoCliente)Naming.lookup("rmi://localhost/Cotizar");
             System.out.println("Introduce una fecha de inicio Ej. 26-09-19");
